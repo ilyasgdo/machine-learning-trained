@@ -3,7 +3,7 @@
   "DataSource": {
     "Type": "Vott",
     "Version": 1,
-    "FilePath": "C:\\Users\\ilyas\\Pictures\\ia\\Stop-Signs\\vott-json-export\\StopSignObjDetection-export.json"
+    "FilePath": "C:\\Users\\ilyas\\Pictures\\ia\\feu\\vott-json-export\\fireDetection-export.json"
   },
   "Environment": {
     "Type": "LocalGPU",
@@ -17,8 +17,8 @@
         "Version": 1,
         "Type": "Trial",
         "TrainerName": "ObjectDetectionMulti",
-        "Score": 0.40277236700057983,
-        "RuntimeInSeconds": 182.262,
+        "Score": 0.093613550066947937,
+        "RuntimeInSeconds": 104.82,
         "Parameter": {
           "_SCHEMA_": "e0 * e1 * e2 * e3",
           "e0": {
@@ -62,7 +62,7 @@
     },
     "Schema": "e0 * e1 * e2 * e3",
     "MetricName": "mAP50_95",
-    "ModelFilePath": "C:\\Users\\ilyas\\source\\repos\\ConsoleApp1\\ConsoleApp1\\MLModel1.mlnet"
+    "ModelFilePath": "C:\\Users\\ilyas\\source\\repos\\ConsoleApp1\\MLModel1_ConsoleApp1\\MLModel1.mlnet"
   },
   "Type": "TrainingConfig",
   "Version": 5,

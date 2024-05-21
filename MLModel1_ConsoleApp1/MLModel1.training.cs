@@ -18,7 +18,7 @@ namespace MLModel1_ConsoleApp1
 {
     public partial class MLModel1
     {
-        public const string RetrainFilePath = @"C:\Users\ilyas\Pictures\ia\Stop-Signs\vott-json-export\StopSignObjDetection-export.json";
+        public const string RetrainFilePath = @"C:\Users\ilyas\Pictures\ia\feu\vott-json-export\fireDetection-export.json";
         public const int TrainingImageWidth = 800;
         public const int TrainingImageHeight = 600;
 
