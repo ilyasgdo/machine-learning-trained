@@ -12,7 +12,7 @@ using System.Drawing;
 
 // Load the image file
 // Load the image file
-var imagePath = @"C:\Users\ilyas\Pictures\ia\Stop-Signs\ron-mcclenny-EpHH_NKwKkE-unsplash.jpg";
+var imagePath = @"C:\Users\ilyas\Pictures\ia\feu\lukas-zischke-oVXMoJemDbo-unsplash.jpg";
 var image = MLImage.CreateFromFile(imagePath);
 
 // Create a single instance of sample data from the first line of dataset for model input.
@@ -44,15 +44,24 @@ foreach (var item in boxes)
 Bitmap bitmap = new Bitmap(imagePath);
 using (Graphics graphics = Graphics.FromImage(bitmap))
 {
+    // Draw header
+    Font font = new Font("Arial", 70, FontStyle.Bold);
+    SolidBrush brush = new SolidBrush(Color.Red);
+    graphics.DrawString("Feu", font, brush, new PointF(10, 10));
+    graphics.DrawString("Score", font, brush, new PointF(200, 10));
+
     // Draw bounding boxes on the image
     foreach (var item in boxes)
     {
         var pen = new Pen(Color.Red, 2);
         graphics.DrawRectangle(pen, item.Box.XTop, item.Box.YTop, item.Box.XBottom - item.Box.XTop, item.Box.YBottom - item.Box.YTop);
+
+        // Draw score
+        graphics.DrawString(item.Score.ToString(), font, brush, new PointF(item.Box.XTop, item.Box.YTop - 20));
     }
 }
 
 // Save the modified image to a file
-string outputImagePath = @"D:\annotated_image.jpg";
+string outputImagePath = @"D:\annotatedfire_image.jpg";
 bitmap.Save(outputImagePath);
 
