@@ -11,7 +11,8 @@ using SkiaSharp;
 using System.Drawing;
 
 // Load the image file
-var imagePath = @"C:\Users\ilyas\Pictures\ia\Stop-Signs\yannis-h-Sqez8_QTi8o-unsplash.jpg";
+// Load the image file
+var imagePath = @"C:\Users\ilyas\Pictures\ia\Stop-Signs\ron-mcclenny-EpHH_NKwKkE-unsplash.jpg";
 var image = MLImage.CreateFromFile(imagePath);
 
 // Create a single instance of sample data from the first line of dataset for model input.
@@ -52,4 +53,6 @@ using (Graphics graphics = Graphics.FromImage(bitmap))
 }
 
 // Save the modified image to a file
-string outputImagePath = @"C:\Users\ilyas\Pictures\annotated_image.jpg";
+string outputImagePath = @"D:\annotated_image.jpg";
+bitmap.Save(outputImagePath);
+
